@@ -1,0 +1,24 @@
+{% extends "base_internal.html" %}
+
+{% block content %}
+
+      <form class="form" method="post">
+        <h1 class="center">With Kelly</h1>
+        <h2 class="form-heading">Please sign up</h2>
+        <input type="text" class="form-control form-top" name="username" placeholder="Username" value="{{ username }}" required autofocus>
+        <span style="color: red">{{ error_username }}{{ error_username2 }}</span>
+        <input type="password" class="form-control form-middle" name="password" placeholder="Password" required>
+        <span style="color: red">{{ error_password }}</span>
+        <input type="password" class="form-control form-middle" name="verify" placeholder="Re-enter Password" required>
+        <span style="color: red">{{ error_verify }}</span>
+        <input type="text" class="form-control form-bottom" name="email" placeholder="Email (optional)" value="{{ email }}">
+        <span style="color: red">{{ error_email }}</span>
+        <label class="checkbox">
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Sign up</button>
+        <div class="center"><a href="/signin">Already have an account? Sign in</a><div>
+      </form>
+
+{% endblock %}
+

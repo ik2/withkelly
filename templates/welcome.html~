@@ -1,0 +1,7 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div><a href="/logout">Logout</a><div>
+    <h2>Welcome, {{ username }}!</h2>
+  </body>
+</html>

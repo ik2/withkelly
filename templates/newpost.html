@@ -1,0 +1,15 @@
+{% extends "base_internal.html" %}
+
+{% block content %}
+
+      <form class="form form-newpost" method="post">
+        <h1 class="form-heading">New Post</h1>
+        <input type="text" class="form-control" name="subject" value="{{ subject }}" placeholder="Subject" required autofocus>
+        <textarea rows="10" class="form-control" name="content" placeholder="Content" required>{{ content }}</textarea>
+        <div style="color: red">{{ error }}</div>
+        <button class="btn btn-lg btn-success btn-block" type="submit">Submit</button>
+        <div class="center"><a href="/dashboard">Back to Dashboard</a><div>
+      </form>
+
+{% endblock %}
+

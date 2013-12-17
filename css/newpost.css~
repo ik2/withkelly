@@ -1,0 +1,54 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+
+.form-newpost {
+  max-width: 660px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-newpost .form-newpost-heading {
+  margin-bottom: 10px;
+}
+.form-newpost .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form-newpost .form-control:focus {
+  z-index: 2;
+}
+.form-newpost input[type="text"] {
+  margin-bottom: 10px;
+}
+.form-newpost .form-top {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-newpost .form-bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form-newpost .form-middle {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form-newpost textarea {
+  margin-bottom: 10px;
+}
+.form-newpost button {
+  width: 330px;
+  margin: 0 auto;
+}
+
+.form-newpost .center {
+  text-align: center;
+}

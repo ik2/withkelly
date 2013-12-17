@@ -1,0 +1,78 @@
+body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #eee;
+}
+.center {
+  text-align: center;
+}
+a:link {
+  color: #468847;
+}
+.form-control:focus {
+  border-color: rgba(70, 136, 0, 0.8);
+  border-color: #468847;
+  outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(70, 136, 0, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(70, 136, 0, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(70, 136, 0, 0.6);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(70, 136, 0, 0.6);
+}
+
+.form {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form .form-heading,
+.form .checkbox {
+  margin-bottom: 10px;
+}
+.form .checkbox {
+  font-weight: normal;
+}
+.form .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.form .form-control:focus {
+  z-index: 2;
+}
+.form input[type="text"] {
+  margin-bottom: -1px;
+}
+.form input[type="password"] {
+  margin-bottom: -1px;
+}
+.form .form-top {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form .form-bottom {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.form .form-middle {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form .btn {
+  margin: 10px auto;
+}
+
+.form-newpost {
+  max-width: 660px;
+}
+.form-newpost input[type="text"] {
+  margin-bottom: 10px;
+}
+.form-newpost button {
+  width: 330px;
+}
