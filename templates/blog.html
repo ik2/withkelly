@@ -1,10 +1,8 @@
 {% extends "base_external.html" %}
 
 {% block content %}
-
     <!-- Carousel ================================================== -->
     <div id="myCarousel" class="carousel slide" data-ride="carousel">
-      <!-- Indicators -->
       <ol class="carousel-indicators">
       {% for post in posts %}
       {% if posts.index(post) == 0 %}
@@ -35,38 +33,11 @@
       <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
       <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
     </div><!-- /.carousel -->
+{% endblock %}
 
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-
-    <div class="container marketing">
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Shopping</h2>
-          <p>This is a sentence.</p>
-          <p><a class="btn btn-default" href="#" role="button">View more &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Travel</h2>
-          <p>This is a sentence.</p>
-          <p><a class="btn btn-default" href="#" role="button">View more &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Cooking</h2>
-          <p>This is a sentence.</p>
-          <p><a class="btn btn-default" href="#" role="button">View more &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->
-
-      <!-- START THE FEATURETTES -->
-
+{% block featurettes %}
+      <!-- Featurettes ================================================== -->
       <hr class="featurette-divider">
-
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
@@ -76,9 +47,7 @@
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
-
       <hr class="featurette-divider">
-
       <div class="row featurette">
         <div class="col-md-5">
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
@@ -98,8 +67,5 @@
           <img class="featurette-image img-responsive" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
         </div>
       </div>
-      <hr class="featurette-divider">
-
-      <!-- /END THE FEATURETTES -->
-
+      <!-- /.featurettes -->
 {% endblock %}

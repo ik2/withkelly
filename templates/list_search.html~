@@ -1,0 +1,12 @@
+{% extends "list.html" %}
+
+{% block list %}
+      <h1>Search results for "{{ keyword }}":</h1>
+      {% if results %}
+        {% for result in results %}
+          <hr>
+          <h2><a href="/post/{{ result.key().id() }}">{{ result.subject }}</a></h2>
+          <p>{{ result.created.strftime("%b %d, %Y") }}</p>
+        {% endfor %}
+{% endblock %}
+

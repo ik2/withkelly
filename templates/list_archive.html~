@@ -1,0 +1,19 @@
+{% extends "base_external.html" %}
+
+{% block content %}
+    <!-- Posts List ================================================== -->
+    <div class="container post">
+      <h1>List of {{ category.capitalize() }} posts:</h1>
+      {% if posts %}
+        {% for post in posts %}
+          <hr>
+          <h2><a href="/post/{{ post.key().id() }}">{{ post.subject }}</a></h2>
+          <p>{{ post.created.strftime("%b %d, %Y") }}</p>
+        {% endfor %}
+      {% else %}
+        <h2>Nothing Found</h2>
+      {% endif %}
+      <hr class="featurette-divider">
+    </div><!-- /.posts list -->
+{% endblock %}
+

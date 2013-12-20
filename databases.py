@@ -1,4 +1,3 @@
-import re
 from google.appengine.ext import db
 
 class User(db.Model):
@@ -14,7 +13,9 @@ class User(db.Model):
 class Post(db.Model):
     subject = db.StringProperty(required = True)
     content = db.TextProperty(required = True)
+    tag = db.StringProperty()
     created = db.DateTimeProperty(auto_now_add = True)
+    image = db.BlobProperty()
 
     def newline_replace(self):
         self.content = re.sub(r"[\r\n]+(?=.+)", "</p><p>", self.content)
@@ -27,5 +28,3 @@ class Post(db.Model):
              'created': self.created.strftime(time_fmt),
             }
         return d
-
-

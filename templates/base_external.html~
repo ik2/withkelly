@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="favicon.ico">
-    <title>With Kelly</title>
-    <link type="text/css" rel="stylesheet" href="/css/bootstrap.min.css">
+{% extends "base.html" %}
+
+{% block css %}
     <link type="text/css" rel="stylesheet" href="/css/external.css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
-<!-- NAVBAR ================================================== -->
-  <body>
+{% endblock %}
+
+{% block body %}
+    <!-- NAVBAR ================================================== -->
+    <div class="container">
     <div class="navbar-wrapper">
       <div class="container">
-
         <div class="navbar navbar-inverse navbar-static-top" role="navigation">
           <div class="container">
             <div class="navbar-header">
@@ -38,41 +26,64 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archive <b class="caret"></b></a>
+                  <a href="/archive" class="dropdown-toggle" data-toggle="dropdown">Archive <b class="caret"></b></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">All</a></li>
+                    <li><a href="/archive">All</a></li>
                     <li class="divider"></li>
                     <li class="dropdown-header">Category</li>
-                    <li><a href="#">Shopping</a></li>
-                    <li><a href="#">Travel</a></li>
-                    <li><a href="#">Cooking</a></li>
+                    <li><a href="/archive/shopping">Shopping</a></li>
+                    <li><a href="/archive/travel">Travel</a></li>
+                    <li><a href="/archive/cooking">Cooking</a></li>
                   </ul>
                 </li>
               </ul>
-              <form class="navbar-form navbar-right" role="search">
+              <form class="navbar-form navbar-right" role="search" action="/search" method="get">
                 <div class="form-group">
-                  <input type="text" class="form-control" placeholder="Search">
+                  <input type="text" class="form-control" name="keyword" placeholder="Search">
                 </div>
-                <button type="submit" class="btn btn-success">Submit</button>
+                <button type="submit" class="btn btn-success"><span class="glyphicon glyphicon-search"></span></button>
+                {% if cookie_logout %}
+                <a class="buttonlink" href="/dashboard"><div class="btn btn-success">Dashboard</div></a>
+                <a class="buttonlink" href="/logout"><div class="btn btn-success">Logout</div></a>
+                {% endif %}
               </form>
             </div>
           </div>
         </div>
-
       </div>
+    </div><!-- /.navbar -->
     </div>
-
     {% block content %}
     {% endblock %}
-
-      <!-- FOOTER -->
+    <!-- Center Container ================================================== -->
+    <div class="container marketing">
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-circle" data-src="holder.js/140x140" alt="shopping">
+          <h2>Shopping</h2>
+          <p>This is a sentence.</p>
+          <p><a class="btn btn-default" href="/archive/shopping" role="button">View more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" data-src="holder.js/140x140" alt="travel">
+          <h2>Travel</h2>
+          <p>This is a sentence.</p>
+          <p><a class="btn btn-default" href="/archive/travel" role="button">View more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+          <img class="img-circle" data-src="holder.js/140x140" alt="cooking">
+          <h2>Cooking</h2>
+          <p>This is a sentence.</p>
+          <p><a class="btn btn-default" href="/archive/cooking" role="button">View more &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->
+      </div><!-- /.row -->
+    {% block featurettes %}
+    {% endblock %}
+      <hr class="featurette-divider">
+      <!-- FOOTER ================================================== -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
         <p>&copy; 2014 With Kelly &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-      </footer>
-    </div><!-- /.container -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="/js/holder.js"></script>
-  </body>
-</html>
+      </footer><!-- /.footer -->
+    </div><!-- /.center container -->
+{% endblock %}

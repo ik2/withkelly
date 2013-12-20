@@ -73,3 +73,7 @@ body {
 .form-newpost button {
   width: 330px;
 }
+
+.form .buttonlink {
+  text-decoration: none;
+}

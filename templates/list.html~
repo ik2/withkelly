@@ -1,0 +1,24 @@
+{% extends "base_external.html" %}
+
+{% block content %}
+    <!-- List ================================================== -->
+    <div class="container post">
+      {% if category %}
+      <h1>List of {{ category.capitalize() }} posts:</h1>
+      {% endif %}
+      {% if search_phrase %}
+      <h1>Search results for "{{ keyword }}":</h1>
+      {% endif %}
+      {% if posts %}
+        {% for post in posts %}
+          <hr>
+          <h2><a href="/post/{{ post.key().id() }}">{{ post.subject }}</a></h2>
+          <p>{{ post.created.strftime("%b %d, %Y") }}</p>
+        {% endfor %}
+      {% else %}
+        <h2>Nothing Found</h2>
+      {% endif %}
+      <hr class="featurette-divider">
+    </div><!-- /.list -->
+{% endblock %}
+

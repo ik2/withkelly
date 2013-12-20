@@ -1,42 +1,15 @@
 {% extends "base_external.html" %}
 
 {% block content %}
-
     <!-- Post ================================================== -->
     <div class="container post">
       <h1>{{ post.subject }}</h1>
       <h2>{{ post.created.strftime("%b %d, %Y") }}</h2>
+      {% if post.image %}
+      <img src="img?img_id={{ post.key() }}" alt="">
+      {% endif %}
       <p>{{ post.content }}</p>
+      <hr class="featurette-divider">
     </div><!-- /.post -->
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
-    
-    <div class="container marketing">
-      <hr class="featurette-divider">
-      <!-- Three columns of text below the carousel -->
-      <div class="row">
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Shopping</h2>
-          <p>This is a sentence.</p>
-          <p><a class="btn btn-default" href="#" role="button">View more &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Travel</h2>
-          <p>This is a sentence.</p>
-          <p><a class="btn btn-default" href="#" role="button">View more &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class="col-lg-4">
-          <img class="img-circle" data-src="holder.js/140x140" alt="Generic placeholder image">
-          <h2>Cooking</h2>
-          <p>This is a sentence.</p>
-          <p><a class="btn btn-default" href="#" role="button">View more &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      <hr class="featurette-divider">
-      </div><!-- /.row -->
-
 {% endblock %}
 

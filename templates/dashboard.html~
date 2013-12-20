@@ -1,13 +1,11 @@
 {% extends "base_internal.html" %}
 
 {% block content %}
-
       <form class="form">
         <h1 class="center">Welcome, {{ username }}!</h1>
-        <a href="/newpost"><div class="btn btn-lg btn-succss btn-block">New Post</div></a>
-        <div class="btn btn-lg btn-succss btn-block">Archive</div>
-        <a href="/"><div class="btn btn-lg btn-succss btn-block">View Blog</div></a>
-        <a href="/logout"><div class="btn btn-lg btn-succss btn-block">Logout</div></a>
+        <a href="/newpost"><div class="btn btn-lg btn-success btn-block">New Post</div></a>
+        <div class="btn btn-lg btn-success btn-block">Archive</div>
+        <a href="/"><div class="btn btn-lg btn-success btn-block">View Blog</div></a>
+        <a href="/logout"><div class="btn btn-lg btn-success btn-block">Logout</div></a>
       </form>
-
 {% endblock %}

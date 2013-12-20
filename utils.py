@@ -38,5 +38,3 @@ def make_password_hash(name, pw, salt=None):
 def valid_password_hash(name, pw, h):
     salt = h.split('|')[1]
     return h == make_password_hash(name, pw, salt)
-
-
